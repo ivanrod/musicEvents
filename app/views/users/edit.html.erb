@@ -1,0 +1,7 @@
+<h1>Edit a visit for <%= @location.name %></h1>
+
+<%= render 'form' %>
+
+<% if @errors.present? %>
+	<%= @errors %>
+<% end %>

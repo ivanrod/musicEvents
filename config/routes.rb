@@ -3,6 +3,13 @@ MusicEvents::Application.routes.draw do
   root 'welcome#index'
 
   resources :locations
+  resources :users do 
+    resources :visits
+  end
+
+
+  #get 'location/:name' => 'location#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

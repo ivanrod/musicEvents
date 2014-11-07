@@ -4,9 +4,9 @@
 <%= f.label :city %>
 <%= f.text_field :city %>
 <%= f.label :latitud %>
-<%= f.number_field :latitud %>
+<%= f.number_field :latitud, :step=>'any' %>
 <%= f.label :longitud %>
-<%= f.number_field :longitud %>
+<%= f.number_field :longitud, :step=>'any' %>
 <br/>
 <%= f.submit "New location" %>
 <% end %>

@@ -9,3 +9,6 @@
 
 <%= link_to("New", new_location_path) %>
 
+<% if flash[:notice] %>
+   <p><%= flash[:notice] %></p> 
+<% end %>

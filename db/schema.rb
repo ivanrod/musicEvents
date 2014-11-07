@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141107110755) do
+ActiveRecord::Schema.define(version: 20141107123729) do
 
   create_table "locations", force: true do |t|
     t.decimal  "latitud"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20141107110755) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "visits", force: true do |t|
+    t.integer  "location_id"
+    t.integer  "user_id"
+    t.datetime "from_date"
+    t.datetime "to_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
