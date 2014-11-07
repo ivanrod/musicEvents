@@ -1,12 +1,14 @@
-<%= form_for [@location, @visit] do |f| %>
-	<%= f.label(:user_name) %>
-	<%= f.text_field(:user_name) %>
-	<br/>
-	<%= f.datetime_select(:from_date, default: Time.now + 1.days ) %>
-	<br/>
-	<%= f.datetime_select(:to_date, default: Time.now + 1.days ) %>
-	<br/>
-	<%= f.submit "Save" %>
+<%= form_for [@location] do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :city %>
+<%= f.text_field :city %>
+<%= f.label :latitud %>
+<%= f.number_field :latitud %>
+<%= f.label :longitud %>
+<%= f.number_field :longitud %>
+<br/>
+<%= f.submit "New location" %>
 <% end %>
 
-<%= link_to("Cancel", location_visits_path(@location)) %>
+<%= link_to("Cancel", locations_path) %>

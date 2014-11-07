@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<h1>Create a new visit for <%= @location.name %></h1>
+
+<h1>Create a new Location </h1>
 
 <%= render 'form' %>
-
-<% if flash[:error] %>
-	<h1><%= flash[:error] %></h1>
-<% end %>
-=======
-
-
-<%= form_for [@location] do |f| %>
-<%= f.label :latitud %>
-<%= f.decimal :latitud %>
-<%= f.label :longitud %>
-<%= f.decimal :longitud %>
-<br/>
-<%= f.submit "New location" %>
-<% end %>
-<button ></button>
->>>>>>> 8eef780fcee1a6d8175ac39b50ee44f31f597fef

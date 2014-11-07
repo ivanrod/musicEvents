@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20141107095424) do
-=======
-ActiveRecord::Schema.define(version: 20141107101130) do
->>>>>>> 8eef780fcee1a6d8175ac39b50ee44f31f597fef
+ActiveRecord::Schema.define(version: 20141107110755) do
 
   create_table "locations", force: true do |t|
     t.decimal  "latitud"
@@ -23,10 +19,7 @@ ActiveRecord::Schema.define(version: 20141107101130) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-<<<<<<< HEAD
-=======
     t.string   "city"
->>>>>>> 8eef780fcee1a6d8175ac39b50ee44f31f597fef
   end
 
   create_table "users", force: true do |t|

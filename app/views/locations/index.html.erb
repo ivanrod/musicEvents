@@ -1,17 +1,11 @@
-<h2>Visits:</h2>
+<h2>Locations:</h2>
 <ul>
-<% @visits.each do |visit| %>
+<% @locations.each do |location| %>
 	<li>
-		<b>User: </b><%= link_to(visit.user_name, location_visit_path(@location,visit)) %>, <b>Location id: </b><%= visit.location_id %>, <b>From: </b><%= visit.from_date %>, <b>To: </b><%= visit.to_date %>  
-		<%= link_to("Delete", location_visit_path(@location, visit), method: 'delete', data:{confirm: "Are you sure?"}) %>
+		<b>Location: </b><%= link_to(location.name + " - " + location.city, location_path(location)) %> 
 	</li>
 <% end %>
 </ul>
 
-<%= link_to("New", new_location_visit_path(@location)) %>
+<%= link_to("New", new_location_path) %>
 
-
-
-<% if flash[:notice] %>
-	<p><%= flash[:notice] %></p>
-<% end %>
