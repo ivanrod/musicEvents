@@ -1,0 +1,13 @@
+<h2>Visits of <%= @user.name %>: </h2>
+<ul>
+<% @visits.each do |visit| %>
+	<li>
+		<b>Visit: </b><%= link_to(visit.location.name, location_path(location)) %> 
+	</li>
+<% end %>
+</ul>
+<%= link_to("New", new_visit_path) %>
+
+<% if flash[:notice] %>
+   <p><%= flash[:notice] %></p> 
+<% end %>

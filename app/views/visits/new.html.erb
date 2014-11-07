@@ -1,0 +1,13 @@
+
+<h1>Create a new Visit for <%= @user.name %> </h1>
+
+<%= render 'form' %>
+
+<% if flash[:error] %>
+<p><%= flash[:error] %></p>
+<ul>
+<% @errors.each do |error_message| %>
+   <li><p><%= error_message %></p> </li>
+<% end %>
+</ul>
+<% end %>
