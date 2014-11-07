@@ -1,0 +1,9 @@
+
+<ul>
+	<li>User name: <%= @visit.user_name %></li>
+	<li>From: <%= @visit.from_date %></li>
+	<li>To: <%= @visit.to_date %></li>
+</ul>
+
+<%= link_to("Edit", edit_location_visit_path(@location,@visit)) %>
+<%= link_to("Delete", location_visit_path(@location, @visit), method: 'delete', data:{confirm: "Are you sure?"}) %>

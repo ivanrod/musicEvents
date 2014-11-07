@@ -1,0 +1,7 @@
+<h1>Create a new visit for <%= @location.name %></h1>
+
+<%= render 'form' %>
+
+<% if flash[:error] %>
+	<h1><%= flash[:error] %></h1>
+<% end %>
