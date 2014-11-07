@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141107091333) do
+ActiveRecord::Schema.define(version: 20141107101130) do
 
   create_table "locations", force: true do |t|
     t.decimal  "latitud"
     t.decimal  "longitud"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "city"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
