@@ -9,7 +9,15 @@ class Location < ActiveRecord::Base
 	def self.showAll
 		locArray = []
 		Location.all.each do |location|
-			locArray.push(location.name)
+			locArray.push([location.name, location.id])
+		end
+		return locArray
+	end
+
+	def self.showAllId
+		locArray = []
+		Location.all.each do |location|
+			locArray.push(location.id)
 		end
 		return locArray
 	end

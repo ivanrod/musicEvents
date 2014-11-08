@@ -2,7 +2,7 @@
 <ul>
 <% @visits.each do |visit| %>
 	<li>
-		<b>Visit: </b><%= link_to(visit.location.name, location_path(location)) %> 
+		<b>Visit: </b><%= link_to(visit.location.name, location_path(visit.location)) %> 
 	</li>
 <% end %>
 </ul>
